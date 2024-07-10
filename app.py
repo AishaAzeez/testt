@@ -1,7 +1,7 @@
 import json
 import google.generativeai as genai
 import streamlit as st
-from api import gemini_api_key
+gemini_api_key=st.secrets.secret.gemini_api_key
 genai.configure(api_key=gemini_api_key)
 model = genai.GenerativeModel('gemini-1.5-pro')
 
